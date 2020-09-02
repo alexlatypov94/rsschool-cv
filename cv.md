@@ -1,4 +1,4 @@
-1. Aliaksei Latypov
+1. Aliaksei Latypau
 2. e-mail: alex.latypov94@gmail.com;
 3. I want to be a front-end develover
 4. HTML, CSS, JS
