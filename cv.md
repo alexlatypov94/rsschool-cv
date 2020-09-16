@@ -4,9 +4,9 @@
   
 ## Contact
 
-  e-mail: alex.latypov94@gmail.com;
-  phone: +375(29)266-47-20
-  Telegram: @alexlatypov
+  * e-mail: alex.latypov94@gmail.com;
+  * phone: +375(29)266-47-20
+  * Telegram: @alexlatypov
   
 ## Summary
 
