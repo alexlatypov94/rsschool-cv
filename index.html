@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CV</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aliaksei Latypau</h1>
+            <p>Student</p>
+        </header>
+        <main>
+            <section class="section-photo"> 
+                <img src="img/photo.jpg" alt="" width="380" height="500">
+            </section>
+            <section>
+                <h3>Contact info</h3>
+                <p>e-mail: <a href="mailto:alex.latypov94@gmail.com">alex.latypov94@gmail.com</a></p>
+            </section>
+            <section>
+                <h3>Summary</h3>
+                <p>I want to be a front-end developer. My goal is to work for an IT company</p>
+            </section>
+            <section>
+                <h3>Skills:</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Code examples:</h3>
+                <p>Codewars KATA</p>
+                <pre><code>
+                    function findShort(s){
+                        let newArr = s.split(' ').map(item => item.length)
+                        return Math.min(...newArr)
+                    }
+            
+                    function squareDigits(num){
+                      let numStr = num.toString().split('')
+                      let str = '';
+                      numStr.forEach(item => {
+                          str += Math.pow(parseInt(item), 2)
+                      });
+                      return parseInt(str)
+                      
+                    };
+                </code></pre>
+            </section>
+            <section>
+                <h3>Education</h3>
+                <ul>
+                    <li>Belorussian-Russian university, mechanical engineering faculty (2017, specialist)</li>
+                    <li>Belorussian-Russian university (2018, magistracy)</li>
+                    <li>Courses of basic objective-oriented programming (2019)</li>
+                </ul>
+            </section>
+            <section>
+                <h3>English</h3>
+                <p>I have pre-intermediate level. I can write simple sentenses and understand slow speech.</p>
+            </section>
+        </main>
+        <footer>
+            <p>©Aliaksei Latypau</p>
+            <p>e-mail: <a href="mailto:alex.latypov94@gmail.com">alex.latypov94@gmail.com</a></p>
+        </footer>
+    </div>
+    
+</body>
+</html>

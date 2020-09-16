@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+main {
+    padding: 0 30px;
+}
+
+h1, h3, p, ul {
+    padding-bottom: 20px;
+}
+
+ul {
+    padding-left: 50px;
+}
+
+header {
+    background-image: url(../img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+header p {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px 0 0 0 ;
+    border-bottom: 3px solid #000000;
+}
+
+section:first-child {
+    padding: 0;
+    border: none;
+}
+
+.section-photo {
+    display: flex;
+    justify-content: center;
+    
+}
+
+img {
+    box-shadow: 0 0 50px #000000;
+}
+
+pre {
+    background-color: darkgray;
+    margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 200px 0 200px;
+    font-size: 12px;
+}
