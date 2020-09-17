@@ -4,73 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <title>CV</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Aliaksei Latypau</h1>
-            <p>Student</p>
-        </header>
-        <main>
-            <section class="section-photo"> 
-                <img src="img/photo.jpg" alt="" width="380" height="500">
-            </section>
-            <section>
-                <h3>Contact info</h3>
-                <p>e-mail: <a href="mailto:alex.latypov94@gmail.com">alex.latypov94@gmail.com</a></p>
-            </section>
-            <section>
-                <h3>Summary</h3>
-                <p>I want to be a front-end developer. My goal is to work for an IT company</p>
-            </section>
-            <section>
-                <h3>Skills:</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#Summary">Summary</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Code">Code example</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#Eng">English</a></li>
                 </ul>
-            </section>
-            <section>
-                <h3>Code examples:</h3>
-                <p>Codewars KATA</p>
-                <pre><code>
-                    function findShort(s){
-                        let newArr = s.split(' ').map(item => item.length)
-                        return Math.min(...newArr)
-                    }
-            
-                    function squareDigits(num){
-                      let numStr = num.toString().split('')
-                      let str = '';
-                      numStr.forEach(item => {
-                          str += Math.pow(parseInt(item), 2)
-                      });
-                      return parseInt(str)
-                      
-                    };
-                </code></pre>
-            </section>
-            <section>
-                <h3>Education</h3>
-                <ul>
-                    <li>Belorussian-Russian university, mechanical engineering faculty (2017, specialist)</li>
-                    <li>Belorussian-Russian university (2018, magistracy)</li>
-                    <li>Courses of basic objective-oriented programming (2019)</li>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="name-block">
+            <div class="container">
+                <div class="its-me">
+                    <h1 class="name">Aliaksei Latypau</h1>
+                    <p class="special">Student in RS School</p>
+                </div>
+                <div class="myphoto">
+                    <img src="/img/photo.jpg" alt="">
+                </div>
+                <ul class="social">
+                    <li><a href="skype:lehatrue"><i class="fa fa-skype"></i></a></li>
+                    <li><a href="https://t.me/alexlatypov"><i class="fa fa-telegram"></i></a></li>
+                    <li><a href="mailto: alex.latypov94@gmail.com"><i class="fa fa-google"></i></a></li>
+                    <li><a href="https://github.com/alexlatypov94"><i class="fa fa-github"></i></a></li>
                 </ul>
-            </section>
-            <section>
-                <h3>English</h3>
-                <p>I have pre-intermediate level. I can write simple sentenses and understand slow speech.</p>
-            </section>
-        </main>
-        <footer>
-            <p>©Aliaksei Latypau</p>
-            <p>e-mail: <a href="mailto:alex.latypov94@gmail.com">alex.latypov94@gmail.com</a></p>
-        </footer>
-    </div>
+            </div> 
+        </section>
+
+        <section class="summary" id="Summary"> 
+            <div class="container">
+                <h1 class="sum-title">Summary</h1>
+                <p class="sum-text">I want to become a front-end develover. I graduated from the Belorussian-Russian university in 2017 and received master’s degree in 2018. Currently working as a process engineer My strengths are stress resistance, the desire to learn something new, I learn quickly and am attentive to the little things in my work.</p>
+            </div>
+        </section>
+
+        <section class="skills" id="Skills">
+            <div class="container">
+                <h1 class="skills-title">Skills</h1>
+                <div class="skills-img">
+                    <img class="html" src="/img/html5.png" alt="">
+                    <img class="css" src="/img/css3.png" alt="">
+                    <img class="js" src="/img/js.png" alt="">
+                    <img class="git" src="/img/git.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="codex" id="Code">
+            <div class="container">
+                <h1 class="code-title">Code example</h1>
+                <div class="code-ex">
+                    <code><pre>
+                        function transform(arr) {
+                            if (!Array.isArray(arr)) {
+                              throw new Error();
+                          }
+                            let newArr = [];
+                            for (let i = 0; i < arr.length; i++) {
+                             if(arr[i] === '--discard-next') {
+                               if (arr.length - i >= 2) {
+                                i++
+                               }
+                             } else if(arr[i] === '--discard-prev') {
+                                if (i >= 1 && arr[i - 2] !== "--discard-next") {
+                                  newArr.pop()
+                                }
+                             }else if(arr[i] === "--double-next") {
+                               if(arr.length - i >= 2) {
+                                 newArr.push(arr[i+1])
+                               }
+                             }else if(arr[i] === "--double-prev") {
+                               if(i >= 1 && arr[i-2] !== "--discard-next") {
+                                 newArr.push(arr[i-1])
+                               }
+                             } else {
+                              newArr.push(arr[i])
+                            }
+                            }
+                            return newArr
+                          };
+                    </pre></code>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="education" id="Education">
+            <div class="container">
+                <h1 class="ed-title">Education</h1>
+                <ul class="ed-list">
+                    <li>Belorussian-Russian university (2017 specialist)</li>
+                    <li>Belorussian-Russian university (2018 magistracy)</li>
+                    <li>courses of basic objective-oriented programming</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="ebglish" id="Eng">
+            <div class="container">
+                <h1 class="eng-title">English</h1>
+                <p class="eng-text">My level of English is A1 or A2 and I continue to study it with a tutor</p>
+            </div>
+        </section>
+        
+                   
+    </main>
+    <footer>
+        <p>©Aliaksei Latypau</p>
+        <p>+375(29)266-4720</p>
+    </footer>
     
 </body>
 </html>
